@@ -468,17 +468,6 @@ md5s = mp3s.map do |mp3|
     md5
   end
 end
-
-query = md5s.map do |md5|
-  'key=' + md5
-end.join('&amp;')
-
-url = 'http://webmemcache.appspot.com/get?namespace=shared_id3_tag&amp;' + query
-
-require 'g'
-g url
-
-`open '#{url}'`
 </string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
